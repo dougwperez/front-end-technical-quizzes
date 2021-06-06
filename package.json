@@ -2,7 +2,7 @@
   "name": "front-end-quiz",
   "version": "1.0.0",
   "description": "A trivia quiz for front end engineering questions",
-  "main": "Gruntfile.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

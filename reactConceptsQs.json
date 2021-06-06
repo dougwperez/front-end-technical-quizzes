@@ -1,0 +1,46 @@
+[
+  {
+    "question": "What is Babel?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Babel is a Javascript compiler that takes code written in one syntax and transpiles it to another using presets. For example, code can be written in ES6 and then converted to ES5 by Babel.",
+        "value": true
+      },
+      {
+        "answer": "Babel is a module bundler that uses ES6 import/export syntax to make React components available to other components in the same application.",
+        "value": false
+      },
+      {
+        "answer": "Babel is the name of a Flux library that is used to manage state in a React application.",
+        "value": false
+      },
+      {
+        "answer": "Babel is the library used to make Ajax requests in React.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Component A is the parent of component B. When component B is clicked on, it needs to update state on component A. How can it do this?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Because of two-way data binding, when component B is clicked on, it automatically updates the state of component A.",
+        "value": false
+      },
+      {
+        "answer": "Define a function on component B that, when invoked, passes the updated state upward back to component A.",
+        "value": false
+      },
+      {
+        "answer": "Define a function that updates state on component A, pass the function as a prop to component B, and invoke the function when B is clicked on.",
+        "value": true
+      },
+      {
+        "answer": "Define a higher level component that is the parent of both A and B that can hold shared state.",
+        "value": false
+      }
+    ]
+  }
+]

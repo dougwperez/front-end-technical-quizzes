@@ -1,265 +1,366 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-module.exports = function(url){
-  // Return a new promise.
-  return new Promise(function(resolve, reject) {
-    // Do the usual XHR stuff
-    var req = new XMLHttpRequest();
-    req.open('GET', url);
-
-    req.onload = function() {
-      // This is called even on 404 etc
-      // so check the status
-      if (req.status === 200) {
-        // Resolve the promise with the response text
-        resolve(req.response);
+(function e(t, n, r) {
+  function s(o, u) {
+    if (!n[o]) {
+      if (!t[o]) {
+        var a = typeof require == "function" && require;
+        if (!u && a) return a(o, !0);
+        if (i) return i(o, !0);
+        var f = new Error("Cannot find module '" + o + "'");
+        throw ((f.code = "MODULE_NOT_FOUND"), f);
       }
-      else {
-        // Otherwise reject with the status text
-        // which will hopefully be a meaningful error
-        reject(Error(req.statusText));
-      }
-    };
-
-    // Handle network errors
-    req.onerror = function() {
-      reject(Error('Network Error'));
-    };
-
-    // Make the request
-    req.send();
-  });
-};
-},{}],2:[function(require,module,exports){
-var get           = require('./modules/get'),
-  shuffleArray    = require('shuffle-array'),
-  content         = document.getElementById('content'),
-  answers         = document.getElementById('answers'),
-  question        = document.getElementById('question'),
-  timer           = document.getElementById('timer'),
-  currentNum      = document.getElementById('current-number'),
-  totalNum        = document.getElementById('total-questions'),
-  start           = document.getElementById('start'),
-  quizTotal       = 25,
-  numberAsked     = 0,
-  correct         = [],
-  questionsAsked  = [],
-  currentCat,
-  currentQuestion,
-  time,
-  data;
-
-// set the number of questions being asked
-totalNum.innerHTML = quizTotal;
-
-// load questions json
-get('questions.json').then(function(response) {
-  data = JSON.parse(response);
-}, function(error) {
-  console.error('Failed!', error);
-});
-
-// start quiz
-start.addEventListener('click', function(event) {
-  start.style.display = 'none';
-  loadQuestion();
-});
-
-// check if answer is correct
-document.querySelector('body').addEventListener('click', function(event) {
-  if (event.target.className === 'answer') {
-    event.preventDefault();
-
-    var rightWrong    = false,
-      ans             = data[currentQuestion].answers;
-    var atag = document.getElementsByClassName('answer');
-    for (var i = 0; i < ans.length; i++){
-
-      // highlight the correct answer
-      if(atag[i].innerHTML === ans[i].answer && ans[i].value === true){
-        atag[i].style.background = 'green';
-        atag[i].style.color = 'white';
-      }
-
-      // set the answer to right if it's correct
-      if(ans[i].answer === event.target.innerHTML && ans[i].value === true){
-        rightWrong = true;
-      }
+      var l = (n[o] = { exports: {} });
+      t[o][0].call(
+        l.exports,
+        function (e) {
+          var n = t[o][1][e];
+          return s(n ? n : e);
+        },
+        l,
+        l.exports,
+        e,
+        t,
+        n,
+        r
+      );
     }
-
-    // if answered correct push to correct array
-    if(rightWrong === true){
-      correct.push(1);
-    }else{
-      event.target.style.background = 'red';
-      event.target.style.color = 'white';
-    }
-
-    // clear previous timer
-    clearInterval(time);
-
-    // load another question
-    setTimeout(function(){
-      loadQuestion();
-    }, 1500);
+    return n[o].exports;
   }
-});
+  var i = typeof require == "function" && require;
+  for (var o = 0; o < r.length; o++) s(r[o]);
+  return s;
+})(
+  {
+    1: [
+      function (require, module, exports) {
+        module.exports = function (url) {
+          // Return a new promise.
+          return new Promise(function (resolve, reject) {
+            // Do the usual XHR stuff
+            var req = new XMLHttpRequest();
+            req.open("GET", url);
 
-function startTimer() {
-    var seconds,
-      thirtySecs = 30;
+            req.onload = function () {
+              // This is called even on 404 etc
+              // so check the status
+              if (req.status === 200) {
+                // Resolve the promise with the response text
+                resolve(req.response);
+              } else {
+                // Otherwise reject with the status text
+                // which will hopefully be a meaningful error
+                reject(Error(req.statusText));
+              }
+            };
 
-    time = setInterval(function() {
-        seconds = parseInt(thirtySecs % 30);
-        seconds = seconds < 10 ? '0' + seconds : seconds;
+            // Handle network errors
+            req.onerror = function () {
+              reject(Error("Network Error"));
+            };
 
-        timer.innerHTML ='00:' + seconds;
-        thirtySecs--;
+            // Make the request
+            req.send();
+          });
+        };
+      },
+      {},
+    ],
+    2: [
+      function (require, module, exports) {
+        var get = require("./modules/get"),
+          shuffleArray = require("shuffle-array"),
+          content = document.getElementById("content"),
+          answers = document.getElementById("answers"),
+          question = document.getElementById("question"),
+          timer = document.getElementById("timer"),
+          currentNum = document.getElementById("current-number"),
+          totalNum = document.getElementById("total-questions"),
+          start = document.getElementById("start"),
+          jsFundamentalsStart = document.getElementById("jsFundamentalsStart"),
+          toyProblemStart = document.getElementById("toyProblemStart"),
+          reactConceptsStart = document.getElementById("reactConceptsStart"),
+          reactToyProblemStart = document.getElementById(
+            "reactToyProblemStart"
+          ),
+          quizTotal = 25,
+          numberAsked = 0,
+          correct = [],
+          questionsAsked = [],
+          currentCat,
+          currentQuestion,
+          time,
+          data;
 
-        if(thirtySecs < 0){
-          clearInterval(time);
-          console.log('time up');
-          loadQuestion();
+        // set the number of questions being asked
+        totalNum.innerHTML = quizTotal;
+
+        // load questions json
+        function loadAllQuestions(questionSet) {
+          get(`${questionSet}.json`).then(
+            function (response) {
+              data = JSON.parse(response);
+              console.log("data", data);
+              loadQuestion();
+            },
+            function (error) {
+              console.error("Failed!", error);
+            }
+          );
         }
 
-    }, 1000);
-}
+        function hideButtons() {
+          start.style.display = "none";
+          toyProblemStart.style.display = "none";
+          reactConceptsStart.style.display = "none";
+          reactToyProblemStart.style.display = "none";
+          jsFundamentalsStart.style.display = "none";
+        }
 
-function loadQuestion(){
-  var answerList = '',
-    numberQuestions = data.length;
+        // start event listeners for menu
+        start.addEventListener("click", function (event) {
+          hideButtons();
+          loadAllQuestions("questions");
+        });
 
-  // clear previous question/answer
-  question.innerHTML = '';
-  answers.innerHTML = '';
+        jsFundamentalsStart.addEventListener("click", function (event) {
+          hideButtons();
+          loadAllQuestions("jsFundamentalsQs");
+        });
 
-  // randomly get question
-  currentQuestion = Math.floor(Math.random() * numberQuestions);
+        toyProblemStart.addEventListener("click", function (event) {
+          hideButtons();
+          loadAllQuestions("jsToyProblemsQs");
+        });
 
-  if(questionsAsked.indexOf(currentQuestion) === -1  && quizTotal > numberAsked){
+        reactConceptsStart.addEventListener("click", function (event) {
+          hideButtons();
+          loadAllQuestions("reactConceptsQs");
+        });
 
-    // add the current question to questionsAsked array so it isn't asked again
-    questionsAsked.push(currentQuestion);
+        reactToyProblemStart.addEventListener("click", function (event) {
+          hideButtons();
+          loadAllQuestions("reactToyProblemsQs");
+        });
 
-    //increase the number of questions asked
-    numberAsked++;
+        reactConceptsStart;
 
-    // update the current question number
-    currentNum.innerHTML = numberAsked;
+        // check if answer is correct
+        document
+          .querySelector("body")
+          .addEventListener("click", function (event) {
+            if (event.target.className === "answer") {
+              event.preventDefault();
 
-    // add question to HTML
-    question.innerHTML = data[currentQuestion].question;
+              var rightWrong = false,
+                ans = data[currentQuestion].answers;
+              var atag = document.getElementsByClassName("answer");
+              for (var i = 0; i < ans.length; i++) {
+                // highlight the correct answer
+                if (
+                  atag[i].innerHTML === ans[i].answer &&
+                  ans[i].value === true
+                ) {
+                  atag[i].style.background = "green";
+                  atag[i].style.color = "white";
+                }
 
-    // the question category
-    currentCat = data[currentQuestion].category;
+                // set the answer to right if it's correct
+                if (
+                  ans[i].answer === event.target.innerHTML &&
+                  ans[i].value === true
+                ) {
+                  rightWrong = true;
+                }
+              }
 
+              // if answered correct push to correct array
+              if (rightWrong === true) {
+                correct.push(1);
+              } else {
+                event.target.style.background = "red";
+                event.target.style.color = "white";
+              }
 
+              // clear previous timer
+              clearInterval(time);
 
-    // get the multiple choice answsers for the question
-    var ans = shuffleArray(data[currentQuestion].answers);
-    for (var i = 0; i < ans.length; i++){
-      answerList += '<li><a href="#" class="answer">' + ans[i].answer + '</a></li>';
-    }
-    // add multiple choice answers to DOM
-    answers.innerHTML = answerList;
+              // load another question
+              setTimeout(function () {
+                loadQuestion();
+              }, 1500);
+            }
+          });
 
-    //start timer
-    startTimer();
+        function startTimer() {
+          var seconds,
+            thirtySecs = 30;
 
-  }else if(quizTotal > numberAsked){
-    // load another question
-    loadQuestion();
-  }else{
-    // all questions have been answered
-    var percent = parseInt((correct.length / quizTotal) * 100, 10);
-    var failPass = 'pass';
-    if(percent <= 50){
-      failPass = 'fail';
-    }
-    content.innerHTML = '<div class="results"><h2 class="'+ failPass +'">'+ percent +'%</h2><p>'+ correct.length + '/' + quizTotal+'</p></div>';
-  }
-}
-},{"./modules/get":1,"shuffle-array":3}],3:[function(require,module,exports){
-'use strict';
+          time = setInterval(function () {
+            seconds = parseInt(thirtySecs % 30);
+            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-/**
- * Randomize the order of the elements in a given array.
- * @param {Array} arr - The given array.
- * @param {Object} [options] - Optional configuration options.
- * @param {Boolean} [options.copy] - Sets if should return a shuffled copy of the given array. By default it's a falsy value.
- * @param {Function} [options.rng] - Specifies a custom random number generator.
- * @returns {Array}
- */
-function shuffle(arr, options) {
+            timer.innerHTML = "00:" + seconds;
+            thirtySecs--;
 
-  if (!Array.isArray(arr)) {
-    throw new Error('shuffle expect an array as parameter.');
-  }
+            if (thirtySecs < 0) {
+              clearInterval(time);
+              console.log("time up");
+              loadQuestion();
+            }
+          }, 1000);
+        }
 
-  options = options || {};
+        function loadQuestion() {
+          var answerList = "",
+            numberQuestions = data.length;
 
-  var collection = arr,
-      len = arr.length,
-      rng = options.rng || Math.random,
-      random,
-      temp;
+          // clear previous question/answer
+          question.innerHTML = "";
+          answers.innerHTML = "";
 
-  if (options.copy === true) {
-    collection = arr.slice();
-  }
+          // randomly get question
+          currentQuestion = Math.floor(Math.random() * numberQuestions);
 
-  while (len) {
-    random = Math.floor(rng() * len);
-    len -= 1;
-    temp = collection[len];
-    collection[len] = collection[random];
-    collection[random] = temp;
-  }
+          if (
+            questionsAsked.indexOf(currentQuestion) === -1 &&
+            quizTotal > numberAsked
+          ) {
+            // add the current question to questionsAsked array so it isn't asked again
+            questionsAsked.push(currentQuestion);
 
-  return collection;
-};
+            //increase the number of questions asked
+            numberAsked++;
 
-/**
- * Pick one or more random elements from the given array.
- * @param {Array} arr - The given array.
- * @param {Object} [options] - Optional configuration options.
- * @param {Number} [options.picks] - Specifies how many random elements you want to pick. By default it picks 1.
- * @param {Function} [options.rng] - Specifies a custom random number generator.
- * @returns {Object}
- */
-shuffle.pick = function(arr, options) {
+            // update the current question number
+            currentNum.innerHTML = numberAsked;
 
-  if (!Array.isArray(arr)) {
-    throw new Error('shuffle.pick() expect an array as parameter.');
-  }
+            // add question to HTML
+            question.innerHTML = data[currentQuestion].question;
 
-  options = options || {};
+            // the question category
+            currentCat = data[currentQuestion].category;
 
-  var rng = options.rng || Math.random,
-      picks = options.picks || 1;
+            // get the multiple choice answsers for the question
+            var ans = shuffleArray(data[currentQuestion].answers);
+            for (var i = 0; i < ans.length; i++) {
+              answerList +=
+                '<li><a href="#" class="answer">' + ans[i].answer + "</a></li>";
+            }
+            // add multiple choice answers to DOM
+            answers.innerHTML = answerList;
 
-  if (typeof picks === 'number' && picks !== 1) {
-    var len = arr.length,
-        collection = arr.slice(),
-        random = [],
-        index;
+            //start timer
+            startTimer();
+          } else if (quizTotal > numberAsked) {
+            // load another question
+            loadQuestion();
+          } else {
+            // all questions have been answered
+            var percent = parseInt((correct.length / quizTotal) * 100, 10);
+            var failPass = "pass";
+            if (percent <= 50) {
+              failPass = "fail";
+            }
+            content.innerHTML =
+              '<div class="results"><h2 class="' +
+              failPass +
+              '">' +
+              percent +
+              "%</h2><p>" +
+              correct.length +
+              "/" +
+              quizTotal +
+              "</p></div>";
+          }
+        }
+      },
+      { "./modules/get": 1, "shuffle-array": 3 },
+    ],
+    3: [
+      function (require, module, exports) {
+        "use strict";
 
-    while (picks) {
-      index = Math.floor(rng() * len);
-      random.push(collection[index]);
-      collection.splice(index, 1);
-      len -= 1;
-      picks -= 1;
-    }
+        /**
+         * Randomize the order of the elements in a given array.
+         * @param {Array} arr - The given array.
+         * @param {Object} [options] - Optional configuration options.
+         * @param {Boolean} [options.copy] - Sets if should return a shuffled copy of the given array. By default it's a falsy value.
+         * @param {Function} [options.rng] - Specifies a custom random number generator.
+         * @returns {Array}
+         */
+        function shuffle(arr, options) {
+          if (!Array.isArray(arr)) {
+            throw new Error("shuffle expect an array as parameter.");
+          }
 
-    return random;
-  }
+          options = options || {};
 
-  return arr[Math.floor(rng() * arr.length)];
-};
+          var collection = arr,
+            len = arr.length,
+            rng = options.rng || Math.random,
+            random,
+            temp;
 
-/**
- * Expose
- */
-module.exports = shuffle;
+          if (options.copy === true) {
+            collection = arr.slice();
+          }
 
-},{}]},{},[2]);
+          while (len) {
+            random = Math.floor(rng() * len);
+            len -= 1;
+            temp = collection[len];
+            collection[len] = collection[random];
+            collection[random] = temp;
+          }
+
+          return collection;
+        }
+
+        /**
+         * Pick one or more random elements from the given array.
+         * @param {Array} arr - The given array.
+         * @param {Object} [options] - Optional configuration options.
+         * @param {Number} [options.picks] - Specifies how many random elements you want to pick. By default it picks 1.
+         * @param {Function} [options.rng] - Specifies a custom random number generator.
+         * @returns {Object}
+         */
+        shuffle.pick = function (arr, options) {
+          if (!Array.isArray(arr)) {
+            throw new Error("shuffle.pick() expect an array as parameter.");
+          }
+
+          options = options || {};
+
+          var rng = options.rng || Math.random,
+            picks = options.picks || 1;
+
+          if (typeof picks === "number" && picks !== 1) {
+            var len = arr.length,
+              collection = arr.slice(),
+              random = [],
+              index;
+
+            while (picks) {
+              index = Math.floor(rng() * len);
+              random.push(collection[index]);
+              collection.splice(index, 1);
+              len -= 1;
+              picks -= 1;
+            }
+
+            return random;
+          }
+
+          return arr[Math.floor(rng() * arr.length)];
+        };
+
+        /**
+         * Expose
+         */
+        module.exports = shuffle;
+      },
+      {},
+    ],
+  },
+  {},
+  [2]
+);

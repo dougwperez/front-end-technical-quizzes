@@ -39,5 +39,115 @@
         "value": false
       }
     ]
+  },
+  {
+    "question": "React ToY Problems ",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "When W3C standards came out browsers couldn't start using them right away so there was two modes standards and quirks mode",
+        "value": true
+      },
+      {
+        "answer": "Quirks mode refers to WebKit browsers and standards mode refers to IE",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode is used for testing and standards mode is used in production websites",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode refers to the developer tools and standards mode refers to the browser window",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "React ToY Problems ",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "When W3C standards came out browsers couldn't start using them right away so there was two modes standards and quirks mode",
+        "value": true
+      },
+      {
+        "answer": "Quirks mode refers to WebKit browsers and standards mode refers to IE",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode is used for testing and standards mode is used in production websites",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode refers to the developer tools and standards mode refers to the browser window",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "React ToY Problems ",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "When W3C standards came out browsers couldn't start using them right away so there was two modes standards and quirks mode",
+        "value": true
+      },
+      {
+        "answer": "Quirks mode refers to WebKit browsers and standards mode refers to IE",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode is used for testing and standards mode is used in production websites",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode refers to the developer tools and standards mode refers to the browser window",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "React ToY Problems ",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "When W3C standards came out browsers couldn't start using them right away so there was two modes standards and quirks mode",
+        "value": true
+      },
+      {
+        "answer": "Quirks mode refers to WebKit browsers and standards mode refers to IE",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode is used for testing and standards mode is used in production websites",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode refers to the developer tools and standards mode refers to the browser window",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "React ToY Problems ",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "When W3C standards came out browsers couldn't start using them right away so there was two modes standards and quirks mode",
+        "value": true
+      },
+      {
+        "answer": "Quirks mode refers to WebKit browsers and standards mode refers to IE",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode is used for testing and standards mode is used in production websites",
+        "value": false
+      },
+      {
+        "answer": "Quirks mode refers to the developer tools and standards mode refers to the browser window",
+        "value": false
+      }
+    ]
   }
 ]

@@ -42,5 +42,294 @@
         "value": false
       }
     ]
+  },
+  {
+    "question": "If a function component should always render the same way given the same props, what is a simple performance optimization available for it?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Wrap it in the 'React-memo' higher order component.",
+        "value": true
+      },
+      {
+        "answer": "Implement the 'useReducer' hook.",
+        "value": false
+      },
+      { "answer": "Implement the 'useMemo' hook.", "value": false },
+      {
+        "answer": "Implement the 'shouldComponentUpdate' lifecycle method.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "How do you handle passing through the component tree without having to pass props down manually at every level?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "React Context",
+        "value": true
+      },
+      {
+        "answer": "React Send",
+        "value": false
+      },
+      {
+        "answer": "React Pinpoint",
+        "value": false
+      },
+      {
+        "answer": "React Router",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Consider the following code from React Router. What do you call :id in the path prop? <Route path='/:id' /> ?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "This is a route parameter.",
+        "value": true
+      },
+      { "answer": "This is a route splitter.", "value": false },
+      {
+        "answer": "This is a route modal.",
+        "value": false
+      },
+      { "answer": "This is a route link", "value": false }
+    ]
+  },
+  {
+    "question": "What do you call the message wrapped in curly braces below? const element = <p>{message}</p>",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "A JS expression.",
+        "value": true
+      },
+      {
+        "answer": "A JS element",
+        "value": false
+      },
+      {
+        "answer": "A JS function",
+        "value": false
+      },
+      { "answer": "A JSX Wrapper", "value": false }
+    ]
+  },
+  {
+    "question": "What can you use to handle code splitting?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "React.lazy",
+        "value": true
+      },
+      {
+        "answer": "React.split",
+        "value": false
+      },
+      {
+        "answer": "React.memo",
+        "value": false
+      },
+      { "answer": "React.fallback", "value": false }
+    ]
+  },
+  {
+    "question": "When do you use `useLayoutEffect`?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "When you need the browser to paoint before the effect runs.",
+        "value": true
+      },
+      { "answer": "To optimize for all devices.", "value": false },
+      { "answer": "To change the layout of the screen.", "value": false },
+      { "answer": "to complete the update", "value": false }
+    ]
+  },
+  {
+    "question": "Why is it important to avoid copying the values of props into a component's state where possible?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Because you want to allow a component to update in response to change in props.",
+        "value": true
+      },
+      { "answer": "Because you should never mutate state.", "value": false },
+      {
+        "answer": "Because 'getDerivedStateFromProps()' is an unsafe method to use.",
+        "value": false
+      },
+      {
+        "answer": "Because you want to allow data to flow back up to the parent.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is a children prop.",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "A property that lets you pass components as data to other components.",
+        "value": true
+      },
+      {
+        "answer": "A property that adds child components to state.",
+        "value": false
+      },
+      {
+        "answer": "A property that lets you set an array as a property.",
+        "value": false
+      },
+      {
+        "answer": "A property that lets you pass data to child elements.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "When using webpack, why would you need to use a loader?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "To load external data.",
+        "value": true
+      },
+      {
+        "answer": "To preprocess files.",
+        "value": false
+      },
+      { "answer": "To put together physical file folders.", "value": false },
+      {
+        "answer": "To load a website into everyones phone.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Why is it a good idea to pass a function to `setState` instead of an object?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "setState is asynchronous and might result in out of sync values.",
+        "value": true
+      },
+      { "answer": "It provides better encapsulation", "value": false },
+      {
+        "answer": "It makes sure that the object is not mutated.",
+        "value": false
+      },
+      { "answer": "It automatically updates a component.", "value": false }
+    ]
+  },
+  {
+    "question": "Which choice will NOT cause a React component to rerender?",
+    "category": "CSS",
+    "answers": [
+      { "answer": "one of the components siblings rerenders.", "value": true },
+      {
+        "answer": "The value of one of the component's props changes.",
+        "value": false
+      },
+      {
+        "answer": "if the component calls 'this.forceUpdate()'",
+        "value": false
+      },
+      { "answer": "The component calls 'this.setState(..)'", "value": false }
+    ]
+  },
+  {
+    "question": "What do you use for Lazy.loading?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "React.lazy",
+        "value": true
+      },
+      { "answer": "Lazy.React", "value": false },
+      { "answer": "this.setState()", "value": false },
+      {
+        "answer": "React.memo",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What do Error Boundaries in React NOT do?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "Catch JavaScript errors outside of the child component tree.",
+        "value": true
+      },
+      {
+        "answer": "Error boundaries are React components that catch JavaScript errors anywhere in their child component tree.",
+        "value": false
+      },
+      { "answer": "Logs the errors found.", "value": false },
+      {
+        "answer": "display a fallback UI instead of the component tree that crashed.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following does NOT fall under React's declarative style?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "Explicitly describes the actions a program should take, and how it should take those actions.",
+        "value": true
+      },
+      {
+        "answer": "Describes what a program should accomplish (or what the end result should be.",
+        "value": false
+      },
+      {
+        "answer": "Leaves the determination of how to get to the end result up to the program.",
+        "value": false
+      },
+      {
+        "answer": "Allows us to focus on what our React application should look like — as opposed to being concerned with manually updating DOM, adding and removing classes, and so on.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What does DangerouslySetInnerHTML replace from vanilla js?",
+    "category": "CSS",
+    "answers": [
+      { "answer": "innerHTML.", "value": true },
+      { "answer": "innerText", "value": false },
+      { "answer": "document.write", "value": false },
+      { "answer": "document.getElementById", "value": false }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
   }
 ]

@@ -13,6 +13,10 @@
       type="text/css"
       media="screen"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!--[if IE]>
       <script src="http://coderesponsible.com/wp-content/themes/cr-2013/js/html5.js"></script>
     <![endif]-->
@@ -35,8 +39,8 @@
       })();
     </script>
   </head>
-  <body>
-    <header>
+  <body id="body">
+    <header class="animate__animated animate__bounce">
       <h1>The Dev Quiz</h1>
       <div id="timer" class="timer"></div>
       <p class="counter">
@@ -44,7 +48,7 @@
         <span id="total-questions"></span> questions
       </p>
     </header>
-    <div id="content">
+    <div id="content" class="animate__animated animate__bounceInLeft">
       <a href="#" id="jsFundamentalsStart" class="start"
         >JavaScript Fundamentals</a
       >

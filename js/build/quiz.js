@@ -115,29 +115,49 @@
           jsFundamentalsStart.style.display = "none";
         }
 
+        function createBackBtn() {
+          console.log("Button called");
+          var button = document.createElement("button");
+          button.type = "button";
+          button.innerHTML = "Quit";
+          button.className = "back-btn";
+          button.addEventListener("click", function () {
+            location.reload();
+            //LATER ADD CONFIRMATION MODAL
+          });
+
+          var inGameBody = document.getElementById("body");
+          inGameBody.append(button);
+        }
+
         // start event listeners for menu
         start.addEventListener("click", function (event) {
           hideButtons();
+          createBackBtn();
           loadAllQuestions("questions");
         });
 
         jsFundamentalsStart.addEventListener("click", function (event) {
           hideButtons();
+          createBackBtn();
           loadAllQuestions("jsFundamentalsQs");
         });
 
         toyProblemStart.addEventListener("click", function (event) {
           hideButtons();
+          createBackBtn();
           loadAllQuestions("jsToyProblemsQs");
         });
 
         reactConceptsStart.addEventListener("click", function (event) {
           hideButtons();
+          createBackBtn();
           loadAllQuestions("reactConceptsQs");
         });
 
         reactToyProblemStart.addEventListener("click", function (event) {
           hideButtons();
+          createBackBtn();
           loadAllQuestions("reactToyProblemsQs");
         });
 
@@ -195,10 +215,10 @@
             thirtySecs = 30;
 
           time = setInterval(function () {
-            seconds = parseInt(thirtySecs % 30);
+            seconds = parseInt(thirtySecs % 31);
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
-            timer.innerHTML = "00:" + seconds;
+            timer.innerHTML = `00:${seconds}`;
             thirtySecs--;
 
             if (thirtySecs < 0) {

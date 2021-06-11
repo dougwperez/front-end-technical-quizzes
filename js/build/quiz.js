@@ -81,6 +81,7 @@
           reactToyProblemStart = document.getElementById(
             "reactToyProblemStart"
           ),
+          socialMedia = document.getElementById("socialMedia"),
           quizTotal = 25,
           numberAsked = 0,
           correct = [],
@@ -113,6 +114,7 @@
           reactConceptsStart.style.display = "none";
           reactToyProblemStart.style.display = "none";
           jsFundamentalsStart.style.display = "none";
+          socialMedia.style.display = "none";
         }
 
         function createBackBtn() {

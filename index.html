@@ -61,6 +61,36 @@
       <h2 id="question" class="question"></h2>
       <ul id="answers" class="answers"></ul>
     </div>
+
+    <ul class="social-buttons" id="socialMedia">
+      <li class="button__share button__share--facebook">
+        <a
+          href="javascript:void(window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent(document.location) + '?t=' + encodeURIComponent(document.title),'_blank'))"
+        >
+          <i class="fa fa-facebook"></i
+        ></a>
+      </li>
+
+      <li class="button__share button__share--twitter">
+        <a
+          href="javascript:void(window.open('https://twitter.com/share?url=' + encodeURIComponent(document.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=fabienb&amp;hashtags=koandesign','_blank'))"
+          ><i class="fa fa-twitter"></i
+        ></a>
+      </li>
+      <!-- optional Twitter username of content author (don’t include “@”)
+  optional Hashtags appended onto the tweet (comma separated. don’t include “#”) -->
+      <li class="button__share button__share--linkedin">
+        <a
+          href="javascript:void(window.open('https://www.linkedin.com/shareArticle?url=' + encodeURIComponent(document.location) + '&amp;title=' + encodeURIComponent(document.title),'_blank'))"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </li>
+      <!-- can add &mini=true -->
+      <!--   <li class="button__share button__share--reddit"><a href="javascript:void(window.open('http://reddit.com/submit?url=' + encodeURIComponent(document.location) + '&amp;title=' + encodeURIComponent(document.title),'_blank'))"><i class="fa-tumblr"></i></a></li>
+  <li class="button__share button__share--hackernews"><a href="javascript:void(window.open('http://news.ycombinator.com/submitlink?u=' + encodeURIComponent(document.location) + '&amp;t=' + encodeURIComponent(document.title),'_blank'))">Hacker News</a></li>
+  <li class="button__share button__share--tumblr"><a href="javascript:void(window.open('https://www.tumblr.com/share/link?url=' + encodeURIComponent(document.location) + '&amp;name=' + encodeURIComponent(document.title),'_blank'))">Tumblr</a></li> -->
+      <!-- can add &description= -->
+    </ul>
     <script src="js/build/quiz.js" type="text/javascript"></script>
   </body>
 </html>

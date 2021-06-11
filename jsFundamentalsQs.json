@@ -1,129 +1,129 @@
 [
   {
-    "question": "What is Babel?",
+    "question": "What is one difference between collections created with Map and collections created with Object?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "Babel is a Javascript compiler that takes code written in one syntax and transpiles it to another using presets. For example, code can be written in ES6 and then converted to ES5 by Babel.",
+        "answer": "You can count the records in a Map with a single method call.",
         "value": true
       },
       {
-        "answer": "Babel is a module bundler that uses ES6 import/export syntax to make React components available to other components in the same application.",
+        "answer": "Keys in Maps can be strings.",
         "value": false
       },
       {
-        "answer": "Babel is the name of a Flux library that is used to manage state in a React application.",
+        "answer": "You can access values in a Map without iterating over the whole collection.",
         "value": false
       },
       {
-        "answer": "Babel is the library used to make Ajax requests in React.",
+        "answer": "You can iterate over values in a Map in their insertion order.",
         "value": false
       }
     ]
   },
   {
-    "question": "Component A is the parent of component B. When component B is clicked on, it needs to update state on component A. How can it do this?",
+    "question": "Which statement is true about the 'async' attribute for the HTML script tag?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "Because of two-way data binding, when component B is clicked on, it automatically updates the state of component A.",
+        "answer": "It can be used only for external JavaScript code.",
         "value": false
       },
       {
-        "answer": "Define a function on component B that, when invoked, passes the updated state upward back to component A.",
+        "answer": "It can be used only for internal JavaScript code.",
         "value": false
       },
       {
-        "answer": "Define a function that updates state on component A, pass the function as a prop to component B, and invoke the function when B is clicked on.",
+        "answer": "It can be used only for internal or external JavaScript code that exports a promise.",
         "value": true
       },
       {
-        "answer": "Define a higher level component that is the parent of both A and B that can hold shared state.",
+        "answer": " It can be used for both internal and external JavaScript code.",
         "value": false
       }
     ]
   },
   {
-    "question": "What is Babel?",
+    "question": "Which of the following is not a unary operator?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "Babel is a Javascript compiler that takes code written in one syntax and transpiles it to another using presets. For example, code can be written in ES6 and then converted to ES5 by Babel.",
+        "answer": "typeof",
         "value": true
       },
       {
-        "answer": "Babel is a module bundler that uses ES6 import/export syntax to make React components available to other components in the same application.",
+        "answer": "delete",
         "value": false
       },
       {
-        "answer": "Babel is the name of a Flux library that is used to manage state in a React application.",
+        "answer": "instanceof",
         "value": false
       },
       {
-        "answer": "Babel is the library used to make Ajax requests in React.",
+        "answer": "void",
         "value": false
       }
     ]
   },
   {
-    "question": "Component A is the parent of component B. When component B is clicked on, it needs to update state on component A. How can it do this?",
+    "question": "Why might you choose to make your code asynchronous?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "Because of two-way data binding, when component B is clicked on, it automatically updates the state of component A.",
+        "answer": "to ensure that tasks further down in your code are not initiated until earlier tasks have completed",
         "value": false
       },
       {
-        "answer": "Define a function on component B that, when invoked, passes the updated state upward back to component A.",
+        "answer": "to start tasks that might take some time without blocking subsequent tasks from executing immediately",
         "value": false
       },
       {
-        "answer": "Define a function that updates state on component A, pass the function as a prop to component B, and invoke the function when B is clicked on.",
+        "answer": "To make your code faster.",
         "value": true
       },
       {
-        "answer": "Define a higher level component that is the parent of both A and B that can hold shared state.",
+        "answer": "to ensure that the call stack maintains a LIFO (Last in, First Out) structure.",
         "value": false
       }
     ]
   },
   {
-    "question": "If a function component should always render the same way given the same props, what is a simple performance optimization available for it?",
+    "question": "Which statement is used to skip just one iteration of the loop?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "Wrap it in the 'React-memo' higher order component.",
+        "answer": "continue",
         "value": true
       },
       {
-        "answer": "Implement the 'useReducer' hook.",
+        "answer": "jump around",
         "value": false
       },
-      { "answer": "Implement the 'useMemo' hook.", "value": false },
+      { "answer": "jump up, jump up, get down", "value": false },
       {
-        "answer": "Implement the 'shouldComponentUpdate' lifecycle method.",
+        "answer": "break",
         "value": false
       }
     ]
   },
   {
-    "question": "How do you handle passing through the component tree without having to pass props down manually at every level?",
+    "question": "Which statement is used to completely exit the loop?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "React Context",
+        "answer": "break",
         "value": true
       },
       {
-        "answer": "React Send",
+        "answer": "continue",
         "value": false
       },
       {
-        "answer": "React Pinpoint",
+        "answer": "Word to your moms, I came to drop bombs",
         "value": false
       },
       {
-        "answer": "React Router",
+        "answer": "I got more rhymes than the Bible's got Psalms",
         "value": false
       }
     ]

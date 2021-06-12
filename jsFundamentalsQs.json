@@ -129,146 +129,172 @@
     ]
   },
   {
-    "question": "Consider the following code from React Router. What do you call :id in the path prop? <Route path='/:id' /> ?",
+    "question": "Explain 'this' in JavaScript?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "This is a route parameter.",
-        "value": true
-      },
-      { "answer": "This is a route splitter.", "value": false },
-      {
-        "answer": "This is a route modal.",
-        "value": false
-      },
-      { "answer": "This is a route link", "value": false }
-    ]
-  },
-  {
-    "question": "What do you call the message wrapped in curly braces below? const element = <p>{message}</p>",
-    "category": "HTML",
-    "answers": [
-      {
-        "answer": "A JS expression.",
+        "answer": "All of these are true.",
         "value": true
       },
       {
-        "answer": "A JS element",
+        "answer": "In an event, “this” refers to the element that received the event.",
         "value": false
       },
       {
-        "answer": "A JS function",
-        "value": false
-      },
-      { "answer": "A JSX Wrapper", "value": false }
-    ]
-  },
-  {
-    "question": "What can you use to handle code splitting?",
-    "category": "HTML",
-    "answers": [
-      {
-        "answer": "React.lazy",
-        "value": true
-      },
-      {
-        "answer": "React.split",
+        "answer": "Methods like call(), and apply() can refer this to any object.",
         "value": false
       },
       {
-        "answer": "React.memo",
-        "value": false
-      },
-      { "answer": "React.fallback", "value": false }
-    ]
-  },
-  {
-    "question": "When do you use `useLayoutEffect`?",
-    "category": "HTML",
-    "answers": [
-      {
-        "answer": "When you need the browser to paoint before the effect runs.",
-        "value": true
-      },
-      { "answer": "To optimize for all devices.", "value": false },
-      { "answer": "To change the layout of the screen.", "value": false },
-      { "answer": "to complete the update", "value": false }
-    ]
-  },
-  {
-    "question": "Why is it important to avoid copying the values of props into a component's state where possible?",
-    "category": "HTML",
-    "answers": [
-      {
-        "answer": "Because you want to allow a component to update in response to change in props.",
-        "value": true
-      },
-      { "answer": "Because you should never mutate state.", "value": false },
-      {
-        "answer": "Because 'getDerivedStateFromProps()' is an unsafe method to use.",
+        "answer": "Alone, “this” refers to the global object.",
         "value": false
       },
       {
-        "answer": "Because you want to allow data to flow back up to the parent.",
+        "answer": "In a method, “this” refers to the owner object.",
         "value": false
       }
     ]
   },
   {
-    "question": "What is a children prop.",
+    "question": "What type of data structure is the DOM?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "A property that lets you pass components as data to other components.",
+        "answer": "The DOM is a tree, where each node is an object representing a part of the document.",
         "value": true
       },
       {
-        "answer": "A property that adds child components to state.",
+        "answer": "The DOM is a linked list, where each node is an object representing a part of the document.",
         "value": false
       },
       {
-        "answer": "A property that lets you set an array as a property.",
+        "answer": "The DOM is a hash table, where each node is an object representing a part of the document.",
         "value": false
       },
       {
-        "answer": "A property that lets you pass data to child elements.",
+        "answer": "The DOM is a tuple, where each node is an object representing a part of the document.",
         "value": false
       }
     ]
   },
   {
-    "question": "When using webpack, why would you need to use a loader?",
+    "question": "What are the only two operations in a Queue?",
     "category": "HTML",
     "answers": [
       {
-        "answer": "To load external data.",
+        "answer": "Enqueue and Dequeue",
         "value": true
       },
       {
-        "answer": "To preprocess files.",
+        "answer": "Push and Pop",
         "value": false
       },
-      { "answer": "To put together physical file folders.", "value": false },
       {
-        "answer": "To load a website into everyones phone.",
+        "answer": "Last In First Out Lifo",
+        "value": false
+      },
+      { "answer": "First in First Out FIFO", "value": false }
+    ]
+  },
+  {
+    "question": "Describe the Stack data structure?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Stack is LIFO, (Last In, First Out). Push adds to the top. Pop removes them.",
+        "value": true
+      },
+      {
+        "answer": "Queue is FIFO, (First In, FIrst Out). Only two operations, Enqueue and Dequeue.",
         "value": false
       }
     ]
   },
   {
-    "question": "Why is it a good idea to pass a function to `setState` instead of an object?",
+    "question": "Which of the following is NOT true about call() and apply()",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Nodes have event handlers attached to them, which handle inputs (like clicks) which can alter the DOM. ",
+        "value": true
+      },
+      {
+        "answer": "Methods like call(), and apply() can refer this to any object.",
+        "value": false
+      },
+      {
+        "answer": "Useful mnemonic is “A for array, and C for comma.”",
+        "value": false
+      },
+      {
+        "answer": "Apply lets you invoke the function with arguments as an array, Call requires the parameters to be listed explicitly.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is a “service” Worker? When would you use one?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "All of these!",
+        "value": true
+      },
+      {
+        "answer": "1. Intercepting network requests",
+        "value": false
+      },
+      {
+        "answer": "2. Caching or retrieving resources from cache.",
+        "value": false
+      },
+      {
+        "answer": "Delivering push messages",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is NOT true about Hoisting?",
+    "category": "HTML",
+    "answers": [
+      {
+        "answer": "Functions declared with ES6 variable names like let and const get hoisted to the top.",
+        "value": true
+      },
+      {
+        "answer": "Variable declarations are moved the top.",
+        "value": false
+      },
+      {
+        "answer": "To call a variable function, you must call it after, whereas a traditional es5 function can be called from anywhere.",
+        "value": false
+      },
+      {
+        "answer": "Declared variables ie Var this = “that”, are hoisted to the top. If we try and console.log(this) at the top, we will get undefined.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "The difference between synchronous and asynchronous code?",
     "category": "CSS",
     "answers": [
       {
-        "answer": "setState is asynchronous and might result in out of sync values.",
+        "answer": "Async and Sync code also executes top to bottom, however, when we encounter async code, will execute separately. You will have multiple different threads. More challenging as code can execute in any order, and you have to account for that.",
         "value": true
       },
-      { "answer": "It provides better encapsulation", "value": false },
       {
-        "answer": "It makes sure that the object is not mutated.",
+        "answer": "Sync code will start at the top of the file, and execute downwards through the file. Always execute top to bottom. Async code does not.",
         "value": false
       },
-      { "answer": "It automatically updates a component.", "value": false }
+      {
+        "answer": "Promises are not an example of async await.",
+        "value": false
+      },
+      {
+        "answer": "Sync code will bottom of the top of the file, and execute downwards through the file. Always execute bottom to top. Opposite for aync.",
+        "value": false
+      }
     ]
   },
   {
@@ -352,6 +378,182 @@
       { "answer": "innerText", "value": false },
       { "answer": "document.write", "value": false },
       { "answer": "document.getElementById", "value": false }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is true about the useMemo hook?",
+    "category": "CSS",
+    "answers": [
+      {
+        "answer": "You may rely on useMemo as a performance optimization, not as a semantic guarantee.",
+        "value": true
+      },
+      {
+        "answer": "You may rely on useMemo as a semantic guarantee, not as a performance optimization.",
+        "value": false
+      },
+      {
+        "answer": "returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).",
+        "value": false
+      },
+      {
+        "answer": "It has demonstrated great potential for brining about world peace.",
+        "value": false
+      }
     ]
   },
   {

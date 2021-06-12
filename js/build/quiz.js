@@ -82,7 +82,7 @@
             "reactToyProblemStart"
           ),
           socialMedia = document.getElementById("socialMedia"),
-          quizTotal = 25,
+          quizTotal = 20,
           numberAsked = 0,
           correct = [],
           questionsAsked = [],
